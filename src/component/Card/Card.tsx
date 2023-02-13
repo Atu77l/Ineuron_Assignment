@@ -29,8 +29,7 @@ function Card1(props:any) {
     navigate(`/update/${id}`);
   };
   return (
-    <Card sx={{ maxWidth: 345 }}>
-        <h1>hekki</h1>
+    <Card sx={{ maxWidth: 345 }} className="m-10 p-5">
         <Typography gutterBottom variant="h5" component="div">
           {props.data.firstName}
         </Typography>

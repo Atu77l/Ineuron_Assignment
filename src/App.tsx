@@ -1,6 +1,7 @@
 import React from 'react'
 import Home from './component/Operation/Home'
 import Add from './component/Operation/Add'
+import './App.css'
 import {Routes,Route,BrowserRouter} from 'react-router-dom'
 import Update from './component/Operation/update'
 const App= () => {

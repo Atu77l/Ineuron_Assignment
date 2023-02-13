@@ -36,21 +36,20 @@ function Home() {
   return (
     <div>
       <Navbar/>
-    <div style={{height:"80vh"}}>
-    <div className="text-3xl font-bold border-r-2 shadow-2xl h-40 m-20 p-10 bg-slate-200">
+    <div style={{height:"30vh"}}>
+    <div className="text-3xl font-bold border-r-2 shadow-2xl h-40 m-20 p-10">
         <h1 className="txt-3xl to-blue-600">Do You Want to add More User?</h1>
-       <Link to='/add'><Button variant="contained">Add User</Button></Link>
-    </div>
-    <div className="h-100 w-auto shadow-lg m-10 flex-auto	flex flex-column">
-   
+       <Link to='/add' className='text-cyan-400'><Button variant="contained">Add User</Button></Link>
     </div>
     </div>
+    <div className="h-100 w-auto shadow-lg m-10 flex-auto	flex flex-column justify-center">
     {
         list.map((item,i)=>(<p key={i}>
            <Card1 data={item}/>
         </p>
       ))
     }
+    </div>
   
     <Footer/>
     </div>

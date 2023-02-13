@@ -75,12 +75,13 @@ const Update = () => {
    
      <>
     <Navabar/>
-    <div className="h-20 shadow-lg m-50 bg-slate-800" style={{margin:"40px",height:"60vh",display:"flex",flexDirection:"row"}}>
-      <TextField id="outlined-basic" label="First_Name" value={fname} onChange={(e)=>setfname(e.target.value)} variant="outlined" />
-      <TextField id="outlined-basic" label="Last_Name" value={lname} onChange={(e)=>setlname(e.target.value)} variant="outlined" />
-      <TextField id="outlined-basic" label="Phone_Number" value={pnumber} onChange={(e)=>setpnumber(e.target.value)} variant="outlined" />
-      <TextField id="outlined-basic" label="Age" value={age} onChange={(e)=>setage(e.target.value)} variant="outlined" />
-      <Button onClick={handleSubmit}>Submit</Button>
+    <div className="h-20 shadow-lg m-20 p-20 justify-center items-center" style={{height:"60vh"}}>
+      <h1 className="text-blue-700">Update it</h1>
+      <TextField id="outlined-basic" label="First_Name" value={fname} onChange={(e)=>setfname(e.target.value)} variant="outlined" className="m-5"/>
+      <TextField id="outlined-basic" label="Last_Name" value={lname} onChange={(e)=>setlname(e.target.value)} variant="outlined" className="m-5"/>
+      <TextField id="outlined-basic" label="Phone_Number" value={pnumber} onChange={(e)=>setpnumber(e.target.value)} variant="outlined" className="m-5"/>
+      <TextField id="outlined-basic" label="Age" value={age} onChange={(e)=>setage(e.target.value)} variant="outlined" className="m-5"/>
+      <Button onClick={handleSubmit} variant="outlined" className="m-10">Submit</Button>
     </div>
     <Footer/>
     </>

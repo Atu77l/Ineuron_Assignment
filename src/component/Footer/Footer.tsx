@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 function Footer() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" className="h-40 align-center">
+      <AppBar position="static" className="h-20 justify-between items-center">
         @ineuron
       </AppBar>
     </Box>
