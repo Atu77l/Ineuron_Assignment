@@ -2,6 +2,8 @@ import React,{useState}from 'react'
 import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
 import axios from 'axios';
+import Navabar from '../Navabar/Navbar';
+import Footer from '../Footer/Footer';
 
 const Add = () => {
   const [lname,setlname]=useState('');
@@ -17,6 +19,8 @@ const Add = () => {
     //   "phoneNumber": "2221212221",
     //   "age": 22
     // });
+    pnumber.length>10?alert("please enter correct value"):alert("Good Number");
+
     const value=JSON.stringify(data);
     var config = {
       method: 'post',
@@ -37,13 +41,17 @@ const Add = () => {
   }
 
   return (
-    <div className="h-20 shadow-lg m-50 bg-slate-800">
+    <>
+    <Navabar/>
+    <div className="h-20 shadow-lg m-50 bg-slate-800" style={{height:"80vh",margin:"30px"}}>
       <TextField id="outlined-basic" label="First_Name" value={fname} onChange={(e)=>setfname(e.target.value)} variant="outlined" />
       <TextField id="outlined-basic" label="Last_Name" value={lname} onChange={(e)=>setlname(e.target.value)} variant="outlined" />
       <TextField id="outlined-basic" label="Phone_Number" value={pnumber} onChange={(e)=>setpnumber(e.target.value)} variant="outlined" />
       <TextField id="outlined-basic" label="Age" value={age} onChange={(e)=>setage(e.target.value)} variant="outlined" />
       <Button onClick={handleSubmit}>Submit</Button>
     </div>
+    <Footer/>
+    </>
   )
 }
 
